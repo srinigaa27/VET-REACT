@@ -15,10 +15,29 @@ function App(){
       setStudents(savedStudents);
     } , []);
 
-    const handleSubmit
+    const handleSubmit = () =>{
+
+   if(
+       name === "" ||
+       email === "" ||
+       department === "" ||
+       age === "" 
+    ) {
+
+        alter("Please fill all fields");
+
+        return;
 
 }
+ const student = {
+          name,
+          email,
+          department,
+          age
+};
 
+if(editIndex !== null){
+    const updatedStudents = [... students];
 
   return(
     <div
